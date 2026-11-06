@@ -12,19 +12,48 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Middag i mørke</a>
       <nav class="site-nav">
         <button>Menu</button>
         <ul class="menu" id="menu" popover>
-          <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./" aria-current="page">Book biletter</a></li>
+          <li><a href="./svg.html">Om koncept</a></li>
         </ul>
       </nav>
     </div>
+
   </header>
 
-  <main></main>
+  <main>
+    <h1 class="hero">TØR DU SMAGE DET DU IKKE KAN SE?</h1>
+    <button class="primary_button" type="button"> træd ind i mørket</button>
+
+    <section class="faq-section">
+      <h2>MIDDAG I MØRKE</h2>
+
+      <!-- Forbind denne sektion med den næste via en attribut i starttagget. -->
+      <details name="accordion" open>
+        <summary> KONCEPT</summary>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nobis recusandae saepe, fugiat officia
+            impedit
+            assumenda ipsa repudiandae odio ducimus laboriosam, laudantium distinctio illo voluptatem tenetur beatae
+            quo!
+          </p>
+        </div>
+      </details>
+
+      <!-- Tilføj samme attribut med samme værdi i dette starttag. -->
+      <details name="accordion" open>
+        <summary>HINT</summary>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet doloremque quaerat ipsa voluptates
+            temporibus
+            a quibusdam facilis?</p>
+        </div>
+      </details>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
