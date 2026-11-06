@@ -1,9 +1,9 @@
 /* Variabler */
 html {
-  --color-page: #f7f7f7;
-  --color-surface: #fff;
-  --color-text: #222;
-  --color-muted: #666;
+  --color-page: #0f0101;
+  --color-surface: hsl(0, 100%, 0%);
+  --color-text: #ffed94;
+  --color-muted: #f5ebdd;
   --color-border: #d8d8d8;
   --space-05: 0.5rem;
   --space-1: 1rem;
@@ -142,6 +142,9 @@ main > * {
   color: inherit;
   font-weight: 700;
   text-decoration: none;
+  width: 100px;
+  height: auto;
+  margin-block: 10px;
 }
 
 .footer-content {
@@ -161,10 +164,11 @@ main > * {
   background: transparent;
 }
 
+/* burgermenuen */
 .site-nav button {
   padding: 0.4rem 0.7rem;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
+  color: #0f0101;
+  background-color: #f0a54a;
   @media (width > 600px) {
     display: none;
   }
@@ -185,13 +189,14 @@ main > * {
     position: static;
   }
 }
-
+/* knapperne i menuen*/
 .menu a {
   display: block;
-  padding: 0.4rem 0;
-  color: inherit;
+  padding: 0.4rem;
+  color: black;
+  background-color: #f0a54a;
   text-decoration: none;
-  border-bottom: 2px solid #0000;
+  border-bottom: #d8d8d8;
 }
 
 .menu a[aria-current="page"] {
@@ -250,4 +255,65 @@ main > * {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+
+/* Forside */
+
+.hero-h1 {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 100px;
+  color: #ffed94;
+}
+
+.knap-på-forside-container {
+  text-align: center;
+}
+
+.knap-på-forside {
+  text-align: center;
+  display: inline-block;
+  background-color: #ffed94;
+  color: #0f0101;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+}
+
+/* informationsbokse på forside*/
+
+.program-teasers {
+  padding: 2rem;
+}
+.program-teasers img {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.program-teasers header {
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.artikler {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 5rem;
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+[popover] {
+  padding: 2rem;
+  border: none;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: auto;
+  background-color: #ffed94;
+  color: #0f0101;
 }
