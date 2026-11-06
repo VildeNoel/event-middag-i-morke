@@ -7,6 +7,13 @@
   <title>Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,7 +21,7 @@
     <div class="header-content">
       <a class="site-logo" href="./">Eventnavn</a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button type="button" popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
           <li><a href="./svg.html">Interaktiv SVG</a></li>
@@ -24,13 +31,108 @@
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <video class="hero-video" autoplay muted>
+      <source src="imgs/hero-video.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero2">
+      <video class="bobler-video" autoplay muted>
+        <source src="imgs/bobler.mp4" type="video/mp4">
+      </video>
+      <h1 class="hero_h1">TØR DU SMAGE <br> DET DU IKKE KAN SE?</h1>
+      <div class="knap_book">
+        <a href="form.html">Book din oplevelse nu</a>
+      </div>
+      <div class="knap_læs">
+        <a href="svg.html">læs om konceptet</a>
+      </div>
+    </div>
+
+    <section class="program-teasers">
+      <header>
+        <h2>Nedslag fra event</h2>
+      </header>
+      <div class="articel">
+        <article class="card">
+          <img src="imgs/tjener.webp" alt="billed af tjener med vinglas">
+          <div class="card-content">
+            <p class="eyebrow">Menuen</p>
+            <h3>En smagsoplevelse</h3>
+            <p>Kom på opdagelse i menuen</p>
+            <button class="card-button" popovertarget="program-details-1">Læs mere</button>
+          </div>
+        </article>
+        <article program-details-1 id="program-details-1" popover>
+          <img src="imgs/bord.webp" alt="billede af fint dækket bord">
+          <p class="eyebrow">Menu</p>
+          <h2>Hvad skal vi spise?</h2>
+          <p>Glæd dig til en nøje sammensat menu med flere serveringer, hvor smag, duft og tekstur spiller
+            hovedrollerne. Vi holder
+            menuen hemmelig, så du kan lade dig overraske fra første til sidste servering.
+
+            Har du allergier eller særlige kostpræferencer, fx vegetarisk, kan du oplyse det ved booking, så vi kan
+            tage hensyn til
+            dine behov.</p>
+          <button class="card-button" popovertarget="program-details-1">luk</button>
+        </article>
+
+
+        <article class="card">
+          <img src="imgs/tjener.webp" alt="billed af tjener med vinglas">
+          <div class="card-content">
+            <p class="eyebrow">Menuen</p>
+            <h3>En smagsoplevelse</h3>
+            <p>Kom på opdagelse i menuen</p>
+            <button class="card-button" popovertarget="program-details-1">Læs mere</button>
+          </div>
+        </article>
+        <article program-details-1 id="program-details-1" popover>
+          <img src="imgs/bord.webp" alt="billede af fint dækket">
+          <p class="eyebrow">Menu</p>
+          <h2>Hvad skal vi spise?</h2>
+          <p>Glæd dig til en nøje sammensat menu med flere serveringer, hvor smag, duft og tekstur spiller
+            hovedrollerne. Vi holder
+            menuen hemmelig, så du kan lade dig overraske fra første til sidste servering.
+
+            Har du allergier eller særlige kostpræferencer, fx vegetarisk, kan du oplyse det ved booking, så vi kan
+            tage hensyn til
+            dine behov.</p>
+          <button class="card-button" popovertarget="program-details-1">luk</button>
+        </article>
+
+        <article class="card">
+          <img src="imgs/tjener.webp" alt="billed af tjener med vinglas">
+          <div class="card-content">
+            <p class="eyebrow">Menuen</p>
+            <h3>En smagsoplevelse</h3>
+            <p>Kom på opdagelse i menuen</p>
+            <button class="card-button" popovertarget="program-details-1">Læs mere</button>
+          </div>
+        </article>
+        <article program-details-1 id="program-details-1" popover>
+          <img src="imgs/bord.webp" alt="billede af fint dækket">
+          <p class="eyebrow">Menu</p>
+          <h2>Hvad skal vi spise?</h2>
+          <p>Glæd dig til en nøje sammensat menu med flere serveringer, hvor smag, duft og tekstur spiller
+            hovedrollerne. Vi holder
+            menuen hemmelig, så du kan lade dig overraske fra første til sidste servering.
+
+            Har du allergier eller særlige kostpræferencer, fx vegetarisk, kan du oplyse det ved booking, så vi kan
+            tage hensyn til
+            dine behov.</p>
+          <button class="card-button" popovertarget="program-details-1">luk</button>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
+      <p>Middag i mørke</p>
       <p>Footer</p>
     </div>
+
   </footer>
   <script src="./script.js"></script>
 </body>
