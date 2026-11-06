@@ -8,7 +8,7 @@
 
 /* Variabler */
 html {
-  --color-page: #0f0101;
+  --color-page: var(--color-surface);
   --color-surface: hsl(0, 20%, 1%);
   --color-text: #ffed94;
   --color-muted: #f5ebdd;
@@ -350,7 +350,7 @@ main > * {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .card img {
