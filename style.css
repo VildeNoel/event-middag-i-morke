@@ -1,9 +1,17 @@
+/* font */
+.cormorant-garamond {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Variabler */
 html {
-  --color-page: #f7f7f7;
-  --color-surface: #fff;
-  --color-text: #222;
-  --color-muted: #666;
+  --color-page: #0f0101;
+  --color-surface: hsl(0, 20%, 1%);
+  --color-text: #ffed94;
+  --color-muted: #f5ebdd;
   --color-border: #d8d8d8;
   --space-05: 0.5rem;
   --space-1: 1rem;
@@ -161,10 +169,13 @@ main > * {
   background: transparent;
 }
 
+/* burgermenu */
 .site-nav button {
-  padding: 0.4rem 0.7rem;
+  color: #0f0101;
+  background-color: #f0a54a;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
+
   @media (width > 600px) {
     display: none;
   }
@@ -176,6 +187,7 @@ main > * {
   list-style: none;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+  position-area: bottom span-left;
   @media (width > 600px) {
     display: flex;
     gap: var(--space-1);
@@ -185,13 +197,15 @@ main > * {
     position: static;
   }
 }
-
+/* knapper i menu */
 .menu a {
   display: block;
-  padding: 0.4rem 0;
-  color: inherit;
+  color: black;
+  background-color: #f0a54a;
   text-decoration: none;
-  border-bottom: 2px solid #0000;
+  border-bottom: #d8d8d8;
+  padding: 0.2rem 0.7rem;
+  border-radius: 5px;
 }
 
 .menu a[aria-current="page"] {
@@ -250,4 +264,115 @@ main > * {
   background: var(--color-surface);
   color: inherit;
   text-decoration: none;
+}
+
+/* **************** Forside hero video ********************** */
+
+.hero-video {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  padding-block: 0;
+}
+
+.hero2 {
+  text-align: center;
+  grid-column: 1 / -1;
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.hero_h1 {
+  font-size: 6rem;
+  color: #ffed94;
+  font-family: "Cormorant Garamond";
+}
+
+.knap_book a {
+  border: 4px solid #ffed94;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: #ffed94;
+  color: black;
+  box-shadow: 3px 3px 10px gray;
+  border-radius: 20px;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+}
+.knap_book {
+  margin-block: 4rem 2rem;
+}
+
+.knap_læs a {
+  font-size: 1.2rem;
+  margin-block: 1rem;
+  color: #f0a54a;
+}
+.bobler-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero_h1,
+.knap_book,
+.knap_læs {
+  position: relative;
+  z-index: 1;
+}
+
+/* informationsbokse forside */
+.program-teasers {
+  padding: 2rem;
+}
+
+.program-teasers img {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.program-teasers header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.articel {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+[popover] {
+  padding: 2rem;
+  border: none;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: auto;
+  background-color: #ffed94;
+  color: #0f0101;
+}
+
+.card-button {
+  background-color: #ffed94;
+  color: #0f0101;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin-block: 1rem;
+  font-size: 1rem;
 }
