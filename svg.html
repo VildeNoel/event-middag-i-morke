@@ -32,24 +32,59 @@
       </header>
 
       <section class="svg-layout">
-        <div class="svg-placeholder"></div>
+        <div class="svg-placeholder">
+          <svg class="svg-event" viewBox="0 0 1920 1080">
+            <use href="./svg_til_event.svg#baggrund"></use>
+            <use id="sortplade" href="./svg_til_event.svg#sortplade"></use>
+          </svg>
+        </div>
 
         <article class="panel">
           <h2>Udforsk eventet</h2>
           <div class="accordion">
-            <!-- TODO: Lav om til details/summary -->
-            <div class="accordion-item">
-              <h3>Punkt 1</h3>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 2</h3>
-              <p>Beskriv andet område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 3</h3>
-              <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
-            </div>
+            <details class="accordion-item" name="accordion" data-position="stage" id="stage" open>
+              <summary> Synssansen – Mærk mørket
+              </summary>
+              <div>
+                Når du træder ind i mørket, forsvinder muligheden for at se, hvad der er omkring dig. Du kan ikke
+                længere aflæse farver,
+                former eller genkende maden på tallerkenen. Det, du normalt tager for givet, bliver pludselig taget fra
+                dig. Uden synet
+                bliver du nødt til at give slip på kontrollen og stole på dine andre sanser. Måske smager maden helt
+                anderledes, når du
+                ikke ved, hvad du spiser?
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="noder" id="noder">
+              <summary> Hørelsen – Lyt til mørket
+              </summary>
+              <div>
+                Når du ikke kan se dine omgivelser, bliver du mere opmærksom på de lyde, der normalt forsvinder i
+                baggrunden. Du lægger
+                måske mærke til musikken, stemmerne omkring dig og lydene fra køkkenet. Selv små lyde kan pludselig
+                føles meget
+                tydelige.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="vin" id="vin">
+              <summary> Lugtesansen – Duften af maden
+              </summary>
+              <div>
+                Duften spiller en stor rolle for din madoplevelse. Når du ikke kan se maden, bliver du måske mere
+                opmærksom på de
+                forskellige aromaer. Kan du dufte krydderierne, de friske råvarer eller den varme mad, før du tager den
+                første bid?
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="nudler" id="nudler">
+              <summary> Smagssansen – Smag med nysgerrighed
+              </summary>
+              <div>
+                Uden synet kan det være sværere at gætte, hvad der ligger på tallerkenen. Du bliver mere opmærksom på
+                smagen,
+                konsistensen og de små detaljer i hver bid. Kan du genkende ingredienserne, når du ikke kan se dem?
+              </div>
+            </details>
           </div>
         </article>
       </section>
