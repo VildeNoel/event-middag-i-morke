@@ -27,7 +27,7 @@ img,
 svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 5rem;
 }
 
 label {
@@ -85,4 +85,79 @@ dialog {
   overflow: hidden;
   white-space: nowrap;
   clip-path: inset(100%);
+}
+
+.site-nav #menu {
+  background: none;
+  border: none;
+}
+
+.site-nav #menu a {
+  color: #fff;
+}
+
+/* ===== FOOTER ===== */
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 48px 32px;
+  color: #ffed94;
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: 1 / -1;
+}
+
+#footer .footer-content {
+  display: block;
+}
+
+#footer p {
+  margin: 0;
+  color: #ffed94;
+}
+
+#footer p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#footer p:last-child {
+  margin-top: 4px;
+  font-style: italic;
+}
+
+#footer .footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+#footer a {
+  color: #ffed94;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+#footer button {
+  padding: 10px 20px;
+  background: none;
+  color: #ffed94;
+  border: 1px solid #ffed94;
+  border-radius: 999px;
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#footer button:hover {
+  background: #ffed94;
+  color: #000;
 }

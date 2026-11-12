@@ -376,3 +376,36 @@ main > * {
   margin-block: 1rem;
   font-size: 1rem;
 }
+
+.form-page {
+  border: none;
+  border-radius: 15px;
+  padding: 5rem;
+  box-shadow: none;
+}
+
+.button {
+  align-items: center;
+  gap: 0.4rem;
+  justify-self: start;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  background: black;
+  padding: 5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+  accent-color: red;
+}
+
+label:has(input:is([type="radio"], [type="checkbox"])) {
+  align-items: center;
+  gap: 0.4rem;
+  justify-self: start;
+  accent-color: black;
+}

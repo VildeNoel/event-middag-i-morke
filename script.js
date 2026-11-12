@@ -8,3 +8,11 @@ if (opsamlingPlaceholder) {
   const params = new URLSearchParams(window.location.search);
   // Eksempel: params.get("navn") henter værdien fra et formularfelt med name="navn".
 }
+
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    form.reset();
+  });
+}
