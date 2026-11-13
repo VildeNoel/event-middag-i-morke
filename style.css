@@ -225,6 +225,7 @@ main > * {
   padding: var(--space-1);
   display: grid;
   gap: var(--space-1);
+  cursor: pointer;
 }
 
 .svg-placeholder,
@@ -420,4 +421,112 @@ summary {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+/* form siden */
+
+button {
+  cursor: pointer;
+  background-color: #f0a54a;
+  color: #0f0101;
+  padding: 0.5rem 1rem;
+}
+:focus-visible {
+  outline: 3px solid #ffed94;
+  outline-offset: 2px;
+}
+button:hover {
+  background: #ffed94;
+}
+
+form {
+  display: grid;
+  accent-color: #ffed94;
+  gap: 10px;
+}
+/* Formularens layout */
+main.form-page {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+  width: 100%;
+}
+
+main.form-page > * {
+  grid-column: auto;
+  padding-block: 0;
+  min-width: 0;
+}
+/* Formular */
+.form-wrapper {
+  background: #171313;
+  border: 1px solid #d4af75;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-intro {
+  background: #171313;
+  border: 1px solid #d4af75;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.passform {
+  display: grid;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* Inputfelter */
+.form-group input:not([type="radio"]):not([type="range"]),
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Radioknapper */
+fieldset.form-group {
+  border: 1px solid var(--color-border);
+  padding: 1rem;
+}
+
+fieldset label {
+  display: block;
+}
+
+.form-steps li {
+  display: grid;
+  grid-template-columns: 4ch 1fr;
+  gap: 1rlh;
+  padding: 1rlh;
+  background: #171313;
+}
+.form-steps {
+  display: grid;
+  gap: 1px;
+  padding: 0;
+  margin: 0;
+
+  overflow: clip;
+  border-radius: 12px;
+  outline: 1px solid #8c7b7b;
+  background: #8c7b7b;
 }

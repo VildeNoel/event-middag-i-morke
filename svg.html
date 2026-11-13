@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="da">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interaktiv SVG | Eventnavn</title>
+  <title>Design dit event-pass | Design Tomorrow 2027</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,18 +11,21 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
-      <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
+      <a class="site-logo" href="./" aria-label="Create 2027">
+        <span>Create</span>
+        <span class="logo-slash">//</span>
+        <span>2027</span>
+      </a>
+      <nav class="site-nav" aria-label="Primær navigation">
+        <button popovertarget="menu">Menu</button>
+        <ul class="menu" id="menu" popover="">
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html" aria-current="page">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Program</a></li>
+          <li><a aria-current="page" href="./form.html" data-variant="filled">Opret pass</a></li>
         </ul>
       </nav>
     </div>
   </header>
-
   <main>
     <section class="svg-page">
       <header class="svg-intro">
@@ -90,14 +92,14 @@
       </section>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="footer-content">
-      <p>Middag i mørke</p>
-      <p>Footer</p>
-    </div>
+    <p class="footer-logo">Create <span>//</span> 2027</p>
+    <p>Digital Design Event</p>
   </footer>
   <script src="./script.js"></script>
+
+
+
 </body>
 
 </html>

@@ -10,28 +10,134 @@
 </head>
 
 <body>
+
   <header class="site-header">
     <div class="header-content">
       <a class="site-logo" href="./">Eventnavn</a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button type="button" popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
+          <li><a href="./" aria-current="page">Forside</a></li>
           <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+          <li><a href="./form.html">Formular</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="form-page">
+  <main class="form-page">
+    <header class="form-intro">
+      <h1>Reserver din plads</h1>
+      <p>Er du klar til at opleve en middag på en helt ny måde? Udfyld oplysningerne nedenfor, og glæd dig til en aften,
+        hvor
+        smag, duft og tekstur er i centrum og hvor du aldrig helt ved, hvad næste bid gemmer på.
+      </p>
+      <ol class="form-steps">
+        <li>
+          <span>1</span>
+          <p>Vælg den dato, der passer dig bedst, og hvor mange I ønsker at deltage..</p>
+        </li>
+        <li>
+          <span>2</span>
+          <p>Oplys dine madpræferencer og eventuelle allergener, så vi kan tage hensyn til dine behov..</p>
+        </li>
+        <li>
+          <span>3</span>
+          <p>Gennemgå dine oplysninger, send din tilmelding, og gør dig klar til en aften fuld af overraskelser..</p>
+        </li>
+      </ol>
+    </header>
+
+    <section class="form-wrapper">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h1>Tilmeld dig en uforglemmelig aften</h1>
+
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="passform" action="./opsamling.html">
+        <div class="form-group">
+          <label for="navn">Fulde navn:</label>
+          <input type="text" name="navn" id="navn">
+        </div>
+
+        <div class="form-group">
+          <label for="tlfnummer">Tlf nummer:</label>
+          <input type="text" name="tlfnummer" id="tlfnummer">
+        </div>
+
+        <div class="form-group">
+          <label for="mail">Gmail:</label>
+          <input type="text" name="mail" id="mail">
+        </div>
+
+        <div class="form-group">
+          <label for="antal-personer">Hvor mange personer er i?</label>
+          <select name="antal-personer" id="antal-personer">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dato">Vælg dato:</label>
+          <select name="dato" id="dato">
+            <option value="dato1">Lørdag d. 18 August 2026 19:00-23:00</option>
+            <option value="dato2">Fredag d. 23 Oktober 2026 17:00-21:00</option>
+            <option value="dato3">Fredag d. 2 December 2026 19:00-23:00</option>
+            <option value="dato4">Lørdag d. 22 December 2026 18:00-22:00</option>
+            <option value="dato5">Torsdag d. 12 Januar 2027 17:00-21:00</option>
+            <option value="dato6">Lørdag d. 24 Januar 2027 18:00-22:00</option>
+
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Hvad foretrækker du?</legend>
+          <label for="vegetar">
+            <input type="radio" id="vegetar" name="mad" value="vegetar">
+            Vegetar
+          </label>
+          <label for="Kødæder">
+            <input type="radio" id="Koed" name="mad" value="Kødæder">
+            Kødæder
+          </label>
+          <label for="Veganer">
+            <input type="radio" id="Veganer" name="mad" value="Veganer">
+            Veganer
+          </label>
+
+        </fieldset>
+        <div class="form-group">
+          <label for="slider">Hvor meget vil du vide om menuen?</label>
+          <input type="range" id="slider" name="slider" min="0" max="100" value="50" step="10">
+        </div>
+
+
+        <div class="form-group">
+          <label for="kommentar">Kommentarer om allergener eller andet</label>
+          <textarea name="kommentar" id="kommentar"></textarea>
+        </div>
+
+
+        <button type="submit">Tilmeld</button>
+
+
+
+
+
+
+      </form>
+
+
+
     </section>
   </main>
 
@@ -43,5 +149,3 @@
   </footer>
   <script src="./script.js"></script>
 </body>
-
-</html>
