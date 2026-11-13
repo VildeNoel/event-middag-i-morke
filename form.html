@@ -27,11 +27,108 @@
   <main>
     <section class="form-page">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h1>Tilmeld dig en uforglemmelig aften her</h1>
+        <p>Udfyld formularen med dine oplysninger for at gennemføre din booking. Du modtager efterfølgende en
+          bekræftelsesmail eller besked med
+          information om din reservation. </p>
+
+        <ol class="form-steps">
+          <li>
+            <span>01</span>
+            <p>Udfyld dine kontaktoplysninger, og vælg dato og antal personer for din ønskede bookning.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <p>Fortæl os om eventuelle allergener og dine madpræferencer – om du foretrækker kød, vegetarisk eller
+              vegansk.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <p>Vælg, hvor meget du ønsker at vide om menuen, og afslut din booking. Du modtager herefter en
+              bekræftelsesmail.</p>
+          </li>
+        </ol>
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="form-placeholder" action="./opsamling.html">
+        <div class="form-group">
+          <label for="fulde-navn">Fulde navn:</label>
+          <input required id="fulde-navn" type="text" name="fulde-navn">
+          <p class="error-message" id="navn-error">Skriv dit fulde navn</p>
+        </div>
+
+        <div class="form-group">
+          <label for="kontaktoplysninger">Telefonnummer eller Email:</label>
+          <input required id="kontaktoplysninger" type="text" name="kontaktoplysninger">
+          <p class="error-message" id="nummer-email-error">Skriv dit telefonnummer eller Email</p>
+        </div>
+
+        <div class="form-group">
+          <label for="dato">Dato</label>
+          <select required name="dato" id="dato">
+            <option value="">-- Vælg en dato --</option>
+            <option value="">6/11-2026 kl.19-21</option>
+            <option value="">13/11-2026 kl.19-21</option>
+            <option value="">20/11-2026 kl.19-21</option>
+            <option value="">27/11-2026 kl.19-21</option>
+            <option value="">4/12-2026 kl.19-21</option>
+            <option value="">11/12-2026 kl.19-21</option>
+          </select>
+          <p class="error-message" id="dato-error">Oplys dato for besøg</p>
+        </div>
+
+        <div class="form-group">
+          <label for="antal-personer">Antal personer:</label>
+          <select required name="antal-personer" id="antal-personer">
+            <option value="">-- Vælg antal personer --</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+          <p class="error-message" id="personer-error">Oplys antal personer</p>
+        </div>
+
+        <label for="allergener">Allergener:</label>
+        <input id="allergener" type="text" name="allergener">
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Hvad foretrækker du?</legend>
+            <label required for="koedspiser">
+              <input required id="koedspiser" type="radio" name="preaferencer" value="koedspiser">Kødspiser
+            </label>
+            <label for="vegetar">
+              <input required id="vegetar" type="radio" name="preaferencer" value="vegetar">Vegetar
+            </label>
+            <label for="veganer">
+              <input required id="veganer" type="radio" name="preaferencer" value="veganer">Veganer
+            </label>
+          </fieldset>
+          <p class="error-message" id="preaferencer-error">Oplys dine mad præferencer</p>
+        </div>
+
+
+        <div class="form-group">
+          <label for="viden">Hvor meget vil du vide om menuen?</label>
+          <div class="range">
+            <span id="intet">Intet</span>
+            <input required id="viden" type="range" name="viden">
+            <span id="meget">Meget</span>
+          </div>
+          <p class="error-message" id="range-error">Oplys hvor meget du vil vide om menuen</p>
+        </div>
+
+
+
+
+
+        <button>
+          Tilmeld
+        </button>
+      </form>
     </section>
   </main>
 

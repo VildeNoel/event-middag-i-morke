@@ -421,3 +421,132 @@ summary {
   height: 100%;
   display: block;
 }
+
+/* forms */
+
+button {
+  cursor: pointer;
+  border: 1px solid #0000;
+  color: #0f0101;
+  background: #ffed94;
+  padding-inline: 15px;
+  padding-block: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+form {
+  accent-color: #f0a54a;
+  display: grid;
+}
+
+.form-placeholder {
+  padding: 30px;
+  box-shadow: 0 1px 15px color-mix(in srgb, #ffed94 45%, transparent);
+  border-radius: 10px;
+}
+
+.form-placeholder fieldset {
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.form-placeholder legend {
+  padding-inline: 10px;
+}
+
+input,
+select {
+  border: 1px solid gainsboro;
+  border-radius: 6px;
+  padding: 1rem;
+  width: 100%;
+}
+
+label:has(input:is([type="radio"], [type="checkbox"])) {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-self: start;
+}
+
+:focus-visible {
+  outline: 3px solid;
+  color: #ffed94;
+}
+
+button:hover {
+  background: #f0a54a;
+}
+
+#viden {
+  width: 100%;
+}
+
+#allergener {
+  margin-bottom: 20px;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+}
+
+#intet {
+  margin-inline: 0 10px;
+}
+
+#meget {
+  margin-inline: 10px 0;
+}
+
+.error-message {
+  color: #ee5050;
+  display: none;
+}
+
+.form-group:has(:user-invalid) {
+  label,
+  legend {
+    color: #ee5050;
+  }
+  input,
+  select {
+    outline: 2px solid #ee5050;
+  }
+  .error-message {
+    display: block;
+  }
+}
+
+.form-group:has(:required) {
+  > label::after,
+  legend::after {
+    content: " *";
+  }
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+label {
+  margin-bottom: 1px;
+}
+
+.form-steps li {
+  display: grid;
+  grid-template-columns: 4ch 1fr;
+  gap: 1px;
+  padding: 1rlh;
+  border: none;
+  border: #e5e2e2 solid 1px;
+}
+
+.form-steps {
+  display: grid;
+  gap: 1px;
+  overflow: clip;
+  border-radius: 12px;
+  outline: 1px solid oklch(87.65% 0.00996 87.447);
+}
