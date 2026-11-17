@@ -5,38 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Opsamling | Eventnavn</title>
-  <link rel="stylesheet" href="./starter.css">
-  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="./opsamling.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
-      <nav class="site-nav">
-        <button>Menu</button>
-        <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="opsamling-page">
-      <div class="opsamling-intro">
-        <h1>Opsamling</h1>
-        <p>Vis brugerens valg som et pass, en invitation eller noget andet, der passer til dit event.</p>
-        <div class="actions">
-          <a class="button" href="./form.html">Tilbage til formular</a>
-        </div>
-      </div>
+  <article class="event-pass" aria-labelledby="pass-title" data-viden="">
+    <img class="logo" src="svg/logo.svg" alt="logo">
 
-      <article class="opsamling-placeholder"></article>
+    <section class="pass-identity">
+
+      <h2 id="pass-title">Velkommen til mørket</h2>
+      <p class="pass-description">
+        <span class="kort-navn"></span>
+        <span><br>Tak for din booking! Vi glæder os til at invitere dig ind i en verden hvor sanserne for alvor kan
+          mærkes.</span>
+      </p>
     </section>
-  </main>
+
+    <section class="pass-details">
+      <div>
+        <p>Dato</p>
+        <p class="kort-dato"></p>
+      </div>
+      <div>
+        <p>Personer</p>
+        <p class="kort-personer"></p>
+
+
+      </div>
+      <div>
+        <p>Madpræference</p>
+        <p class="kort-mad"></p>
+      </div>
+      <div>
+        <p>Allergener</p>
+        <p class="kort-allergener"></p>
+      </div>
+    </section>
+
+    <section class="pass-section">
+      <h3>Din menuoplevelse</h3>
+      <p class="kort-menu-tekst"></p>
+    </section>
+    <img class="lysestage" src="svg/lysestage.svg" alt="lysestage">
+
+    <div class="actions">
+      <a class="button" href="./form.html">Tilbage til formular</a>
+    </div>
+  </article>
+
 
   <footer class="site-footer">
     <div class="footer-content">

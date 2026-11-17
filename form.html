@@ -7,6 +7,7 @@
   <title>Formular | Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
@@ -66,13 +67,12 @@
         <div class="form-group">
           <label for="dato">Dato</label>
           <select required name="dato" id="dato">
-            <option value="">-- Vælg en dato --</option>
-            <option value="">6/11-2026 kl.19-21</option>
-            <option value="">13/11-2026 kl.19-21</option>
-            <option value="">20/11-2026 kl.19-21</option>
-            <option value="">27/11-2026 kl.19-21</option>
-            <option value="">4/12-2026 kl.19-21</option>
-            <option value="">11/12-2026 kl.19-21</option>
+            <option value="6/11-2026 kl.19-21">6/11-2026 kl.19-21</option>
+            <option value="13/11-2026 kl.19-21">13/11-2026 kl.19-21</option>
+            <option value="20/11-2026 kl.19-21">20/11-2026 kl.19-21</option>
+            <option value="27/11-2026 kl.19-21">27/11-2026 kl.19-21</option>
+            <option value="4/12-2026 kl.19-21">4/12-2026 kl.19-21</option>
+            <option value="11/12-2026 kl.19-21">11/12-2026 kl.19-21</option>
           </select>
           <p class="error-message" id="dato-error">Oplys dato for besøg</p>
         </div>
@@ -98,13 +98,13 @@
           <fieldset>
             <legend>Hvad foretrækker du?</legend>
             <label required for="koedspiser">
-              <input required id="koedspiser" type="radio" name="preaferencer" value="koedspiser">Kødspiser
+              <input required id="koedspiser" type="radio" name="preaferencer" value="Kødspiser">Kødspiser
             </label>
             <label for="vegetar">
-              <input required id="vegetar" type="radio" name="preaferencer" value="vegetar">Vegetar
+              <input required id="vegetar" type="radio" name="preaferencer" value="Vegetar">Vegetar
             </label>
             <label for="veganer">
-              <input required id="veganer" type="radio" name="preaferencer" value="veganer">Veganer
+              <input required id="veganer" type="radio" name="preaferencer" value="Veganer">Veganer
             </label>
           </fieldset>
           <p class="error-message" id="preaferencer-error">Oplys dine mad præferencer</p>
@@ -115,7 +115,7 @@
           <label for="viden">Hvor meget vil du vide om menuen?</label>
           <div class="range">
             <span id="intet">Intet</span>
-            <input required id="viden" type="range" name="viden">
+            <input required id="viden" type="range" name="viden" min="0" max="100" value="50">
             <span id="meget">Meget</span>
           </div>
           <p class="error-message" id="range-error">Oplys hvor meget du vil vide om menuen</p>
