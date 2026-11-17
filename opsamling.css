@@ -1,0 +1,104 @@
+/* Selve bookingpasset */
+body {
+  background-color: black;
+}
+.event-pass {
+  width: 650px;
+  margin: 40px auto;
+  padding: 55px 75px;
+  background-color: #514747;
+  color: #f5ebdd;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Overskriften */
+.pass-header {
+  margin-bottom: 35px;
+}
+
+.pass-brand {
+  font-family: serif;
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+/* Personlig velkomst */
+.pass-identity {
+  border-top: 1px solid #d4af75;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.pass-identity h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.pass-description {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* Oplysninger */
+.pass-details {
+  margin-bottom: 55px;
+  line-height: 1.6;
+}
+
+/* Menu */
+.pass-section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.pass-section p {
+  font-size: 17px;
+}
+
+/* lysestage */
+.event-pass {
+  position: relative;
+}
+.lysestage {
+  position: absolute;
+  width: 85px;
+  height: auto;
+  right: -50px;
+  bottom: 0;
+  width: 250px;
+}
+
+/* knappen-tilbage til formular */
+.button {
+  display: block;
+  color: black;
+  background-color: #f4e7a7;
+  text-decoration: none;
+  border-bottom: #d8d8d8;
+  padding: 0.2rem 0.7rem;
+  border-radius: 5px;
+}
+
+/* logo */
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* farven på passet  */
+
+.event-pass[data-viden="lidt"] {
+  background-color: #171313;
+}
+
+.event-pass[data-viden="mellem"] {
+  background-color: #514848;
+}
+
+.event-pass[data-viden="meget"] {
+  background-color: #847373;
+}
