@@ -714,3 +714,14 @@ label {
 .svg-event {
   view-transition-name: svg-event;
 }
+
+.footer-btn {
+  padding: 10px 20px;
+  background: none;
+  color: #ffed94;
+  border: 1px solid #ffed94;
+  border-radius: 999px;
+  font: inherit;
+  white-space: nowrap;
+  cursor: pointer;
+}
