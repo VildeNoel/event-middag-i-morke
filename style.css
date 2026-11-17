@@ -558,3 +558,48 @@ label {
   border-radius: 12px;
   outline: 1px solid oklch(87.65% 0.00996 87.447);
 }
+
+/* teaser svg */
+.tool-feature {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rlh;
+  border-radius: 20px;
+  outline: 1px solid oklch(0.8 0.03 0);
+  padding: 1rlh;
+  overflow: clip;
+}
+
+.tool-feature img {
+  border-radius: 20px;
+}
+
+.tool-feature h2 {
+  margin-block: 1rem;
+}
+
+.tool-feature p {
+  color: white;
+  margin-block: 1rem;
+}
+
+.btn {
+  background-color: #ffed94;
+  color: black;
+  font-weight: bold;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* overgang til teaser */
+
+@view-transition {
+  navigation: auto;
+}
+
+.svg-event {
+  view-transition-name: svg-event;
+}
