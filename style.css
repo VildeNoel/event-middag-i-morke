@@ -159,6 +159,9 @@ body:has(.hero) .site-header {
   color: inherit;
   font-weight: 700;
   text-decoration: none;
+  svg {
+    width: 40%;
+  }
 }
 
 .footer-content {
@@ -669,6 +672,7 @@ label {
   outline: 1px solid oklch(87.65% 0.00996 87.447);
 }
 
+/* teaser svg */
 /* teaser svg */
 .tool-feature {
   display: grid;
