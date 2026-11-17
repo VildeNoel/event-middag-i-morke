@@ -102,3 +102,40 @@ body {
 .event-pass[data-viden="meget"] {
   background-color: #847373;
 }
+/* Nye ændringer */
+
+.site-header,
+.site-footer {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: inherit;
+  background: var(--color-surface);
+}
+.header-content {
+  min-height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+}
+.site-logo {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  svg {
+    width: 40%;
+  }
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 48px 32px;
+  color: #ffed94;
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: 1 / -1;
+}
