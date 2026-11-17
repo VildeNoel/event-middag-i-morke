@@ -456,7 +456,6 @@ form {
 .form-group {
   display: grid;
   gap: 0.5rem;
-  accent-color: red;
 }
 
 label:has(input:is([type="radio"], [type="checkbox"])) {
