@@ -26,8 +26,47 @@ if (svg_til_event) {
 }
 
 // Opsamlingsside
-const opsamlingPlaceholder = document.querySelector(".opsamling-placeholder");
+const opsamlingPlaceholder = document.querySelector(".event-pass");
 
 if (opsamlingPlaceholder) {
+  // hent svarene som brugeren skriver
   const params = new URLSearchParams(window.location.search);
+  const navn = params.get("fulde-navn");
+  const kontakt = params.get("kontaktoplysninger");
+  const dato = params.get("dato");
+  const personer = params.get("antal-personer");
+  const allergener = params.get("allergener");
+  const mad = params.get("preaferencer");
+  const viden = params.get("viden");
+  // hvor mørkt skal passet være?
+  const eventPass = document.querySelector(".event-pass");
+
+  if (viden <= 30) {
+    eventPass.dataset.viden = "lidt";
+  } else if (viden <= 70) {
+    eventPass.dataset.viden = "mellem";
+  } else {
+    eventPass.dataset.viden = "meget";
+  }
+
+  // indsætter informationerne på kortet
+  document.querySelector(".kort-navn").textContent = navn;
+  document.querySelector(".kort-dato").textContent = dato;
+  document.querySelector(".kort-personer").textContent = personer;
+  document.querySelector(".kort-mad").textContent = mad;
+  document.querySelector(".kort-allergener").textContent = allergener;
+
+  // Forskellig tekst alt efter hvor meget gæsten vil vide
+  const menuTekst = document.querySelector(".kort-menu-tekst");
+
+  if (viden <= 30) {
+    menuTekst.textContent =
+      "Du har valgt at lade dig overraske. Vi afslører ingenting – du må stole på dine sanser.";
+  } else if (viden <= 70) {
+    menuTekst.textContent =
+      "Du får et lille indblik i menuen, men vi gemmer stadig nogle overraskelser til selve aftenen.";
+  } else {
+    menuTekst.textContent =
+      "Du vil gerne vide mere om menuen på forhånd. Derfor får du et større indblik i, hvad der venter dig.";
+  }
 }

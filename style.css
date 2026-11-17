@@ -377,6 +377,16 @@ main > * {
   font-size: 1rem;
 }
 
+/* svg */
+
+@view-transition {
+  navigation: auto;
+}
+
+.svg-event {
+  view-transition-name: svg-event;
+}
+
 /* noder */
 #sortplade {
   transition: 0.5s;
