@@ -45,6 +45,7 @@ main {
   grid-template-columns: inherit;
   grid-column: 1 / -1;
   align-content: start;
+  padding-top: 6rem;
 }
 
 main > * {
@@ -136,6 +137,13 @@ p {
   display: grid;
   grid-template-columns: inherit;
   background: var(--color-surface);
+}
+.site-header {
+  background: hsl(0deg 20% 1% / 65%);
+  position: fixed;
+  top: 0;
+  inset-inline: 0;
+  z-index: 99;
 }
 
 .header-content,
@@ -486,7 +494,7 @@ label:has(input:is([type="radio"], [type="checkbox"])) {
   align-items: center;
   gap: 0.4rem;
   justify-self: start;
-  accent-color: black;
+  accent-color: #f0a54a;
 }
 
 /* ---------- Kort-animation ---------- */
