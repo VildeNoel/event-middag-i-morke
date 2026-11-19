@@ -259,12 +259,6 @@ nav a:hover {
   gap: var(--space-1);
 }
 
-.svg-placeholder,
-.opsamling-placeholder {
-  min-height: -webkit-fill-available;
-  min-height: stretch;
-}
-
 .form-placeholder {
   min-height: -webkit-fill-available;
   min-height: stretch;
