@@ -69,4 +69,18 @@ if (opsamlingPlaceholder) {
     menuTekst.textContent =
       "Du vil gerne vide mere om menuen på forhånd. Derfor får du et større indblik i, hvad der venter dig.";
   }
+
+  // forskellige ikoner ud fra hvilken madpræference man vælger
+
+  const madIkon = document.querySelector(".mad-ikon");
+  if (mad === "Vegetar") {
+    madIkon.src = "imgs/brocolli.png";
+    madIkon.alt = "Broccoli";
+  } else if (mad === "Veganer") {
+    madIkon.src = "imgs/gulerod.png";
+    madIkon.alt = "Gulerod";
+  } else if (mad === "Kødspiser") {
+    madIkon.src = "imgs/Bøf.png";
+    madIkon.alt = "Bøf";
+  }
 }
