@@ -200,9 +200,8 @@ body:has(.hero) .site-header {
 /* burgermenu */
 .site-nav button {
   color: #0f0101;
-  background-color: #f0a54a;
+  background: #ffed94;
   border: 1px solid var(--color-border);
-  background: var(--color-surface);
 
   @media (width > 600px) {
     display: none;
@@ -265,6 +264,12 @@ nav a:hover {
   padding: var(--space-1);
   display: grid;
   gap: var(--space-1);
+}
+
+.svg-placeholder,
+.opsamling-placeholder {
+  min-height: -webkit-fill-available;
+  min-height: stretch;
 }
 
 .form-placeholder {
@@ -428,7 +433,7 @@ h2 {
   margin: 0%;
   /* luft mellem overskrift og undertekst */
 }
-[popover] {
+article[popover] {
   padding: 2rem;
   border: none;
   border-radius: 15px;
@@ -750,4 +755,144 @@ label {
   font: inherit;
   white-space: nowrap;
   cursor: pointer;
+}
+
+/* =========================================================
+   MOBIL OG TABLET
+   ========================================================= */
+
+/* Tablet og mindre (under 800px) */
+@media (width <= 800px) {
+  /* Kortene står under hinanden i stedet for 3 ved siden af hinanden */
+  .article {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 0;
+  }
+
+  /* Sanse-boksen: billede øverst, tekst under */
+  .tool-feature {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Popover-boksene skal ikke skubbes til siden på små skærme */
+  #program-details-1:popover-open,
+  #program-details-3:popover-open {
+    translate: 0 0;
+  }
+}
+
+/* Mobil (under 600px) */
+@media (width <= 600px) {
+  /* Mindre top-luft, så indholdet ikke starter for langt nede */
+  main {
+    padding-top: 4rem;
+  }
+
+  main > * {
+    padding-block: var(--space-2);
+  }
+
+  /* Logoet: fast størrelse, så det ikke stikker ud af headeren */
+  .site-logo svg {
+    width: 7rem;
+    display: block;
+  }
+
+  /* Burgermenuen: kun synlig når man trykker på Menu,
+     og den åbner øverst til højre under knappen */
+  .site-nav .menu:popover-open {
+    position: fixed;
+    position-area: none;
+    inset: 4.5rem 1rem auto auto; /* top, højre, bund, venstre */
+    margin: 0;
+    padding: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    max-width: none;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+  }
+
+  /* Hero: overskriften skalerer med skærmen */
+  .hero_h1 {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+    padding-inline: 1rem;
+  }
+
+  .knap_book {
+    margin-block: 2rem 1rem;
+  }
+
+  .knap_book a {
+    font-size: 1.1rem;
+    padding-inline: 1.5rem;
+  }
+
+  /* Overskrifter lidt mindre */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Kort-sektionen */
+  .program-teasers {
+    padding: 0;
+    margin-block: 3rem;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  /* Popover-boksene fylder skærmen med lidt luft i siderne */
+  article[popover] {
+    max-width: calc(100% - 2rem);
+    padding: 1.5rem;
+  }
+
+  /* Sanse-boksen */
+  .tool-feature {
+    padding: 1rem;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+  }
+
+  /* Formularsiden: mindre padding, ellers bliver felterne alt for smalle */
+  .form-page {
+    padding: 0;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  .form-placeholder {
+    padding: 1rem;
+  }
+
+  /* Footer: elementerne under hinanden */
+  .footer-content,
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer-btn {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Footer-links skal ligge i samme kolonne som resten af indholdet */
+.footer-links {
+  grid-column: 2;
+  padding-block-end: var(--space-1);
 }
